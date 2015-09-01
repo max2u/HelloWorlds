@@ -3,30 +3,24 @@
   <display-name>HelloJSPWorld</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-        <servlet-name>HelloJSP</servlet-name>
-        <servlet-class>HelloJSP</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloJSP</servlet-name>
-        <url-pattern>/HelloJSP</url-pattern>
-    </servlet-mapping>
+    <servlet-name>HelloJSP</servlet-name>
+    <servlet-class>com.max.web.servlet.HelloJSP</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloJSP</servlet-name>
+    <url-pattern>/HelloJSP</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>SecurityFilter</display-name>
+    <filter-name>SecurityFilter</filter-name>
+    <filter-class>com.max.web.filter.SecurityFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SecurityFilter</filter-name>
+    <url-pattern>/*</url-pattern>
     
-    
-    
-  <servlet>
-        <servlet-name>hello</servlet-name>
-        <servlet-class>hello</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+  </filter-mapping>
 </web-app>
